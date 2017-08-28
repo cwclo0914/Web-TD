@@ -15,21 +15,22 @@ namespace Login.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "経緯";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "ご意見・お問い合わせ";
 
             return View();
         }
 
         public ActionResult GameSelection()
         {
-            ViewBag.Message = "Please select game.";
+            ViewBag.Message = "以下から選択してください：";
+
             return View();
         }
 
