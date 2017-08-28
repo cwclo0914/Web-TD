@@ -1,10 +1,12 @@
-﻿<!DOCTYPE html>
+﻿@using WebTD.Helpers;
+
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - マイ ASP.NET アプリケーション</title>
+    <title>@ViewBag.Title - DIVA Game Arcade</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -18,16 +20,18 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("アプリケーション名", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <strong>@Html.MenuLink("DIVAゲームセンター", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })</strong>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("ホーム", "Index", "Home")</li>
-                    <li>@Html.ActionLink("詳細", "About", "Home")</li>
-                    <li>@Html.ActionLink("連絡先", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("ゲーム選択", "GameSelection", "Home")</li>
+
+                    <li>@Html.MenuLink("概要", "About", "Home")</li>
+                    <li>@Html.MenuLink("ゲーム選択", "GameSelection", "Home")</li>
                 </ul>
-                @Html.Partial("_LoginPartial")
+                <ul class="nav navbar-nav navbar-right">
+                    <li>@Html.MenuLink("ご意見・お問い合わせ", "Contact", "Home")</li>
+                </ul>
+                
             </div>
         </div>
     </div>

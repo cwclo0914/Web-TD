@@ -1,10 +1,10 @@
 ﻿
 @{
-    ViewBag.Title = "Game Selection";
+    ViewBag.Title = "ゲーム選択";
 }
 
 <h2>@ViewBag.Title</h2>
 <h3>@ViewBag.Message</h3>
 
-<br />
-<p>タワーディフェンス</p> @Html.ActionLink("Tower Defense", "Index", "TD")
+@Html.ActionLink("Tower Defense", "Index", "TD", null, new { @class = "btn btn-primary btn-lg" })
+@Html.ActionLink("取扱説明書", "TowerDefense", "Manual")
