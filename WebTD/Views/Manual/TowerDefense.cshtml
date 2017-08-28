@@ -1,0 +1,215 @@
+﻿
+@{
+    ViewBag.Title = "TowerDefense";
+}
+
+
+<h1>TowerDefense</h1>
+
+
+<h3>・ゲームの流れ</h3>
+<p>
+    道に沿って敵が拠点を壊しに来ます<br />
+    ユニットを配置して敵を退けてください<br />
+    全ての敵がいなくなるとステージクリアです。<br />
+    拠点が破壊されてしまうとゲームオーバーです<br />
+
+</p>
+
+<h3>・画面説明</h3>
+
+<ul>
+
+    <li>
+        ステージにあるもの<br />
+        <img src="~/Content/Image/Stage.png" />
+        <ul>
+            <li>
+                ベース<br />
+                これを守ることがこのゲームの目的です<br />
+            </li>
+            <li>
+                ソケット<br />
+                ユニットを置くための台<br />
+            </li>
+            <li>
+                ユニット<br />
+                敵を攻撃して、ベースを守ってくれる<br />
+            </li>
+            <li>
+                敵<br />
+                道の上を進んできて、ベースに攻撃をしてきます。<br />
+            </li>
+
+        </ul>
+    </li>
+    <li>
+        パネルにあるもの<br />
+        <ul>
+            <li>
+                ボタン<br />
+                <img src="~/Content/Image/Button.png" />
+                <ul>
+                    <li>
+                        ユニットボタン<br />
+                        ユニットを配置するためのボタン<br />
+                        下に書いてある金額はユニットを配置する費用です<br />
+                    </li>
+                    <li>
+                        メニューボタン<br />
+                        ステージを一時停止させてメニューを開きます<br />
+                    </li>
+                    <li>
+                        停止・再生・早送り<br />
+                        ステージを止めたり早送りしたりできます(今は早送り機能はありません)<br />
+                    </li>
+                </ul>
+            </li>
+            <li>
+                数値<br />
+                <img src="~/Content/Image/Value.png" />
+                <ul>
+                    <li>
+                        Life<br />
+                        ベースの残り体力を表しています<br />
+                        0になるとゲームオーバーです<br />
+                    </li>
+                    <li>
+                        Wave<br />
+                        各Waveで敵の群れが出てきます<br />
+                        敵の群れが後どれだけ来るかを表しています<br />
+                    </li>
+                    <li>
+                        Money<br />
+                        プレイヤーが所持しているお金<br />
+                    </li>
+
+
+
+                </ul>
+            </li>
+        </ul>
+
+
+    </li>
+
+
+
+</ul>
+
+
+
+
+<h3>・ユニット</h3>
+<ul>
+    <li>
+        種類<br />
+        <!--画像の大きさなどは後で調整します-->
+        <table border="1">
+            <tr>
+                <td>ユニット</td>
+                <td>特徴</td>
+            </tr>
+            <tr>
+                <td><img src="~/Content/Image/Weapon1.png" /></td>
+                <td align=left>
+                    <ul>
+                        <li>攻撃スピードが速い</li>
+                        <li>地上の敵しか攻撃できない</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="~/Content/Image/Weapon2.png" /></td>
+                <td align=left>
+                    <ul>
+                        <li>標準的な能力</li>
+                        <li>空中の敵しか攻撃できない</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="~/Content/Image/Weapon3.png" /></td>
+                <td align=left>
+                    <ul>
+                        <li>攻撃力と範囲がとても大きい</li>
+                        <li>地上・空中の両方の敵を攻撃できる</li>
+                    </ul>
+                </td>
+
+        </table>
+    </li>
+    <li>
+        攻撃範囲<br />
+        ユニットにマウスを合わせると攻撃範囲が表示されます
+    </li>
+    <li>
+        ユニットメニュー<br />
+        ユニットをクリックするとメニューが出てきます
+        <ul>
+            <li>
+                アップグレード<br />
+                お金を使ってユニットをアップグレードし、強くすることができます<br />
+            </li>
+            <li>
+                売却<br />
+                ユニットを売却してお金にすることができます<br />
+            </li>
+        </ul>
+    </li>
+</ul>
+
+
+
+
+<h3>・敵</h3>
+<table border=1>
+    <tr>
+        <td>タイプ</td>
+        <td>ユニット</td>
+        <td>特徴</td>
+    </tr>
+    <tr>
+        <td rowspan=3>地上</td>
+        <td><img src="~/Content/Image/Enemy1.png" /></td>
+        <td align=left>
+            <ul>
+                <li>HPは少ないが、素早い</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td><img src="~/Content/Image/Enemy2.png" /></td>
+        <td align=left>
+            <ul>
+                <li>敵1よりは遅いが、HPは多め</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td><img src="~/Content/Image/Enemy3.png" /></td>
+        <td align=left>
+            <ul>
+                <li>とても移動速度は遅いが、ベースに与えるダメージはとても大きい</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>空中</td>
+        <td><img src="~/Content/Image/Enemy4.png" /></td>
+        <td align=left>
+            <ul>
+                <li>空を飛んでいるので、緑の砲台では倒せない</li>
+            </ul>
+        </td>
+
+
+    </tr>
+</table>
+
+
+<h3>・その他</h3>
+<p>データ消去</p>
+
+
+
