@@ -2264,9 +2264,9 @@ textarea.input-lg {
     }
 
 .btn-primary {
-    color: #ffffff;
-    background-color: #428bca;
-    border-color: #357ebd;
+    color: #000000;
+    background-color: #ffc256;
+    border-color: #ffcb00;
 }
 
     .btn-primary:hover,
@@ -2275,8 +2275,8 @@ textarea.input-lg {
     .btn-primary.active,
     .open .dropdown-toggle.btn-primary {
         color: #ffffff;
-        background-color: #3276b1;
-        border-color: #285e8e;
+        background-color: #f29b00;
+        border-color: #ffaf20;
     }
 
     .btn-primary:active,
@@ -4383,9 +4383,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
     }
 
 .navbar-brand-selected {
-    color: #fff;
     float: left;
-    padding: 15px 15px 15px 0px;
+    padding: 15px 15px;
     font-size: 18px;
     line-height: 20px;
     font-style: italic;
@@ -4393,7 +4392,6 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
     .navbar-brand-selected:hover,
     .navbar-brand-selected:focus {
-        color: #fff;
         text-decoration: none;
     }
 
@@ -4401,11 +4399,10 @@ textarea.input-group-sm > .input-group-btn > .btn {
     .navbar > .container .navbar-brand {
         margin-left: -15px;
     }
-}
 
-.navbar-selected {
-    color: #fff;
-    font-style: italic;
+    .navbar > .container .navbar-brand-selected {
+        margin-left: -15px;
+    }
 }
 
 .navbar-toggle {
@@ -4722,12 +4719,28 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
         .navbar-inverse .navbar-brand:hover,
         .navbar-inverse .navbar-brand:focus {
-            color: #ffffff;
+            color: #FFFFFF;
+            background-color: transparent;
+        }
+
+    .navbar-inverse .navbar-brand-selected {
+        color: #FFFFFF;
+    }
+
+        .navbar-inverse .navbar-brand-selected:hover,
+        .navbar-inverse .navbar-brand-selected:focus {
+            color: #FFFFFF;
             background-color: transparent;
         }
 
     .navbar-inverse .navbar-text {
         color: #D8D8D8;
+    }
+
+
+    .navbar-inverse .navbar-nav .navbar-selected {
+        color: #FFFFFF;
+        font-style: italic;
     }
 
     .navbar-inverse .navbar-nav > li > a {
@@ -5149,7 +5162,8 @@ a.list-group-item.active > .badge,
     font-weight: 200;
     line-height: 2.1428571435;
     color: inherit;
-    background-color: #eeeeee;
+    background-color: #c4f0ff;
+    text-align: center;
 }
 
     .jumbotron h1 {
