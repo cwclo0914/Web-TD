@@ -196,6 +196,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ManualController.cs" />
     <Compile Include="Controllers\TDController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -210,6 +212,16 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Image\Button.png" />
+    <Content Include="Content\Image\Enemy1.png" />
+    <Content Include="Content\Image\Enemy2.png" />
+    <Content Include="Content\Image\Enemy3.png" />
+    <Content Include="Content\Image\Enemy4.png" />
+    <Content Include="Content\Image\Stage.png" />
+    <Content Include="Content\Image\Value.png" />
+    <Content Include="Content\Image\Weapon1.png" />
+    <Content Include="Content\Image\Weapon2.png" />
+    <Content Include="Content\Image\Weapon3.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -286,6 +298,7 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\GameSelection.cshtml" />
+    <Content Include="Views\Manual\TowerDefense.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
