@@ -24,12 +24,12 @@
     <div class="panel-heading">画面説明</div>
 
     <div class="panel-body">
-        <p>画像をマウスオーバーすると対象の説明が出てきます。</p>
-        <div class="container">
-            <div class="row">
+        <center>
+            <p>画像をマウスオーバーすると対象の説明が出てきます。</p>
+            <div class="container">
+                <div class="row">
 
-                <div class="col-sm-6">
-                    <center>
+                    <div class="col-sm-6">
                         <strong>ステージ</strong><br />
                         <img src="~/Content/Image/Stage.png" id="stagePic" usemap="#stageMap" />
                         <map name="stageMap">
@@ -40,16 +40,15 @@
                                 <area shape="poly" coords="75,8,233,8,233,183,180,183,180,48,75,48" title="<strong>敵：</strong><br />道の上を進んで、ベースに攻撃してきます" />
                             </p>
                         </map>
-                    </center>
-                </div>
+                    </div>
 
-                <div class="col-sm-6">
-                    <center>
+                    <div class="col-sm-6">
                         <strong>パネル（ボタン）</strong><br />
                         <img src="~/Content/Image/Button.png" id="buttonPic" usemap="#buttonMap" />
                         <map name="buttonMap">
                             <p id="buttonToolTip">
-                                <area shape="rect" coords="15,3,242,103" title="<strong>ユニットボタン：</strong><br />ユニットを配置するためのボタンです<br/>（金額はユニットを配置する費用です）" />
+                                <area shape="rect" coords="15,3,242,65" title="<strong>ユニットボタン：</strong><br />ユニットを配置するためのボタンです<br/>解除するには右クリックしてください" />
+                                <area shape="rect" coords="15,76,242,103" title="<strong>配置費用：</strong><br />ユニットを配置する費用です" />
                                 <area shape="rect" coords="7,117,30,140" title="<strong>メニューボタン：</strong><br />ステージを一時停止させてメニューを開きます" />
                                 <area shape="rect" coords="37,117,122,140" title="<strong>停止・再生・早送り：</strong><br />ステージを止めたり早送りしたりできます<br />（今は早送り機能はありません）" />
                             </p>
@@ -64,133 +63,182 @@
                                 <area shape="rect" coords="9,77,189,102" title="<strong>Money：</strong><br />プレイヤーが所持しているお金です" />
                             </p>
                         </map>
-                    </center>
+                    </div>
                 </div>
-
             </div>
+        </center>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">ユニット</div>
+    <center>
+        <div class="panel-body">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-sm-4">
+                        <p><strong>種類</strong></p>
+                        <p>ユニット上の数字はレベルを表しています。</p>
+                        <p>
+                            <table class="table-bordered">
+                                <tr>
+                                    <th>ユニット</th>
+                                    <th>特徴</th>
+                                </tr>
+                                <tbody>
+                                    <tr>
+                                        <td align="center"><img src="~/Content/Image/Weapon1.png" /></td>
+                                        <td align=left>
+                                            <ul>
+                                                <li>攻撃スピードが速い</li>
+                                                <li>地上の敵しか攻撃できない</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center"><img src="~/Content/Image/Weapon2.png" /></td>
+                                        <td align=left>
+                                            <ul>
+                                                <li>標準的な能力</li>
+                                                <li>空中の敵しか攻撃できない</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center"><img src="~/Content/Image/Weapon3.png" /></td>
+                                        <td align=left>
+                                            <ul>
+                                                <li>攻撃力と範囲がとても大きい</li>
+                                                <li>地上・空中の両方の敵を攻撃できる</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </p>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <p><strong>攻撃範囲</strong></p>
+                        <p>ユニットにマウスを合わせると攻撃範囲が表示されます。</p>
+                        <p><img src="~/Content/Image/Range.png" /></p>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <p><strong>ユニットメニュー</strong></p>
+                        <p>
+                            ユニットをクリックするとメニューが出てきます。<br />
+                            （マウスオーバーでさらに説明があります。）
+                        </p>
+                        <img src="~/Content/Image/UnitMenu.png" id="unitMenuPic" usemap="#unitMenu" /> <br />
+                        <map name="unitMenu">
+                            <p id="unitMenuToolTip">
+                                <area shape="rect" coords="7,13,75,80" title="<strong>アップグレード</strong><br />お金を使ってユニットをアップグレードし、強くすることができます" />
+                                <area shape="poly" coords="80,13,80,80,135,80,135,22,127,22,127,13,80,13" title="<strong>売却</strong><br />ユニットを売却してお金にすることができます" />
+                                <area shape="rect" coords="127,1,146,22" title="<strong>閉じる</strong><br />ユニットメニューを閉じます" />
+                            </p>
+                        </map>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">敵</div>
+    <center>
+        <div class="panel-body">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p><strong>種類</strong></p>
+                        <p>緑色のバーは敵のHPを表しています。</p>
+                        <p>
+                            <table align="center" class="table-bordered">
+                                <tr>
+                                    <th>タイプ</th>
+                                    <th>ユニット</th>
+                                    <th>特徴</th>
+                                </tr>
+                                <tbody>
+                                    <tr>
+                                        <td rowspan=3 align="center">地上</td>
+                                        <td align="center"><img src="~/Content/Image/Enemy1.png" /></td>
+                                        <td align=left>
+                                            <ul>
+                                                <li>HPは少ないが、素早い</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center"><img src="~/Content/Image/Enemy2.png" /></td>
+                                        <td align=left>
+                                            <ul>
+                                                <li>やや遅いが、HPは多め</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center"><img src="~/Content/Image/Enemy3.png" /></td>
+                                        <td align=left>
+                                            <ul>
+                                                <li>移動速度はとても遅いが、<span style="color:red">ベースを一撃で破壊してしまう</span></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">空中</td>
+                                        <td align="center"><img src="~/Content/Image/Enemy4.png" /></td>
+                                        <td align=left>
+                                            <ul>
+                                                <li>空を飛んでいるので、<span style="color:red">緑の大砲では倒せない</span></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </p>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <p><strong>出現位置</strong></p>
+                        <p>敵は画面外からの道かやぶから出てきます。</p>
+                        <table>
+                            <tr>
+                                <td align="center" style="padding-right: 30px"><img src="~/Content/Image/Entrance.png" /></td>
+                                <td align="center"><img src="~/Content/Image/Bush.png" /></td>
+                            </tr>
+                            <tr>
+                                <td align="center" style="padding-right: 30px">画面外からの道</td>
+                                <td align="center">やぶ</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">その他</div>
+
+    <div class="panel-body">
+        <div class="container">
+            
+            <p><strong>データ消去</strong></p>
+            <p>
+                スタート画面にはデータ消去のボタンがあり、押したら確認画面が出てきます。<br />
+                赤い<span style="color:red">YES</span>ボタンを押すと全データを消去しますが、<br />
+                <span style="color:red"><strong><u>消去したデータは戻すことができないので、使用時には気を付けてください。</u></strong></span>
+            </p>
         </div>
     </div>
 </div>
 
+@* 必ず文末に置くこと *@
 <script src="~/Scripts/ManualTooltips.js"></script>
-
-
-
-<div class="panel panel-default">
-    <div class="panel-heading">ユニット</div>
-
-    <div class="panel-body">
-        <table class="table-bordered">
-            <tr>
-                <th>ユニット</th>
-                <th>特徴</th>
-            </tr>
-            <tbody>
-                <tr>
-                    <td align="center"><img src="~/Content/Image/Weapon1.png" /></td>
-                    <td align=left>
-                        <ul>
-                            <li>攻撃スピードが速い</li>
-                            <li>地上の敵しか攻撃できない</li>
-                        </ul>
-                    </td>
-                </tr>
-                <tr>
-                    <td align="center"><img src="~/Content/Image/Weapon2.png" /></td>
-                    <td align=left>
-                        <ul>
-                            <li>標準的な能力</li>
-                            <li>空中の敵しか攻撃できない</li>
-                        </ul>
-                    </td>
-                </tr>
-                <tr>
-                    <td align="center"><img src="~/Content/Image/Weapon3.png" /></td>
-                    <td align=left>
-                        <ul>
-                            <li>攻撃力と範囲がとても大きい</li>
-                            <li>地上・空中の両方の敵を攻撃できる</li>
-                        </ul>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
-
-<ul>
-    <li>
-        種類<br />
-
-    </li>
-    <li>
-        攻撃範囲<br />
-        ユニットにマウスを合わせると攻撃範囲が表示されます
-    </li>
-    <li>
-        ユニットメニュー<br />
-        ユニットをクリックするとメニューが出てきます
-        <ul>
-            <li>
-                アップグレード<br />
-                お金を使ってユニットをアップグレードし、強くすることができます<br />
-            </li>
-            <li>
-                売却<br />
-                ユニットを売却してお金にすることができます<br />
-            </li>
-        </ul>
-    </li>
-</ul>
-
-
-
-
-<h3>・敵</h3>
-<table border=1>
-    <tr>
-        <td>タイプ</td>
-        <td>ユニット</td>
-        <td>特徴</td>
-    </tr>
-    <tr>
-        <td rowspan=3>地上</td>
-        <td><img src="~/Content/Image/Enemy1.png" /></td>
-        <td align=left>
-            <ul>
-                <li>HPは少ないが、素早い</li>
-            </ul>
-        </td>
-    </tr>
-    <tr>
-        <td><img src="~/Content/Image/Enemy2.png" /></td>
-        <td align=left>
-            <ul>
-                <li>敵1よりは遅いが、HPは多め</li>
-            </ul>
-        </td>
-    </tr>
-    <tr>
-        <td><img src="~/Content/Image/Enemy3.png" /></td>
-        <td align=left>
-            <ul>
-                <li>とても移動速度は遅いが、ベースに与えるダメージはとても大きい</li>
-            </ul>
-        </td>
-    </tr>
-    <tr>
-        <td>空中</td>
-        <td><img src="~/Content/Image/Enemy4.png" /></td>
-        <td align=left>
-            <ul>
-                <li>空を飛んでいるので、緑の砲台では倒せない</li>
-            </ul>
-        </td>
-
-
-    </tr>
-</table>
-
-
-<h3>・その他</h3>
-<p>データ消去</p>

@@ -581,7 +581,7 @@ h4 small,
 
 ul,
 ol {
-    padding-left: 15px;
+    padding-left: 20px;
     padding-right: 5px;
     margin: 0;
 }
@@ -1583,6 +1583,7 @@ th {
 .table {
     width: 100%;
     margin-bottom: 20px;
+    align-content: center;
 }
 
     .table thead > tr > th,

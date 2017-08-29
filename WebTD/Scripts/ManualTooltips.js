@@ -29,3 +29,12 @@ $("#valueToolTip").tooltip({
         my: "right", at: "left", of: "#valuePic"
     }
 });
+
+$("#unitMenuToolTip").tooltip({
+    content: function () {
+        return this.getAttribute("title");
+    },
+    position: {
+        my: "top", at: "bottom", of: "#unitMenuPic"
+    }
+});
