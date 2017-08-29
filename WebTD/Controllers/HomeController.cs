@@ -15,8 +15,6 @@ namespace Login.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "経緯";
-
             return View();
         }
 
@@ -29,7 +27,7 @@ namespace Login.Controllers
 
         public ActionResult GameSelection()
         {
-            ViewBag.Message = "以下から選択してください：";
+            ViewBag.Message = "ゲームを選択してください：";
 
             return View();
         }

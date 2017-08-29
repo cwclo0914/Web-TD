@@ -3,10 +3,19 @@
     ViewBag.Title = "ゲーム選択";
 }
 
-<h2>@ViewBag.Title</h2>
-<h3>@ViewBag.Message</h3>
+<br />
 
-<center>
-    <p><a href="@Url.Action("Index", "TD")" title="Tower Defense" class="links"><img alt="Tower Defense" src="@Url.Content("~/Content/Image/TDButton.png")" /></a></p>
-    <strong>@Html.ActionLink("取扱説明書", "TowerDefense", "Manual")</strong>
-</center>
+<div class="panel panel-default">
+    <div class="panel-heading" style="font-size:30px;">
+        <center>@ViewBag.Message</center>
+    </div>
+    <div class="panel-body">
+        <div class="well">
+            <center>
+                <p><a href="@Url.Action("Index", "TD")" title="Tower Defense" class="links"><img alt="Tower Defense" src="@Url.Content("~/Content/Image/TDButton.png")" /></a></p>
+                <strong>タワーディフェンス（@Html.ActionLink("取扱説明書", "TowerDefense", "Manual")）</strong>
+            </center>
+        </div>
+    </div>
+</div>
+

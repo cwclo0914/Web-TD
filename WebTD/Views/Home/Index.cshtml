@@ -1,11 +1,11 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "ようこそ";
 }
 
 <div class="jumbotron">
-    <h1>DIVAゲームセンター</h1>
-    <p class="lead">疲れた時には…</p>
-    <p>@Html.ActionLink("ゲームへGO! »", "GameSelection", "Home", null, new { @class = "btn btn-game btn-lg" })
+    <p><img src="~/Content/Image/Title.jpg" /></p>
+    <p>へようこそ！</p><br />
+    <p class="lead">疲れた時にはゲームへ @Html.ActionLink("GO! »", "GameSelection", "Home", null, new { @class = "btn btn-primary btn-lg" })
 </p>
 </div>
 

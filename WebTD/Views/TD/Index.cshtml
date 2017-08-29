@@ -1,4 +1,5 @@
-﻿
+﻿@using WebTD.Helpers;
+
 @{
     ViewBag.Title = "Tower Defense";
 }
@@ -6,9 +7,10 @@
 <meta charset="utf-8">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Unity WebGL Player | Tower Defense</title>
-<link rel="shortcut icon" href="/Scripts/TemplateData/favicon.ico">
-<link rel="stylesheet" href="/Scripts/TemplateData/style.css">
+<link rel="shortcut icon" href="~/Scripts/TemplateData/favicon.ico">
+<link rel="stylesheet" href="~/Scripts/TemplateData/style.css">
 @Scripts.Render("~/bundles/unity")
+@* 公開する時は"./Scripts/Build/TowerDefense.json"で *@
 <script>var gameInstance = UnityLoader.instantiate("gameContainer", "/Scripts/Build/TowerDefense.json", { onProgress: UnityProgress });</script>
 
 
@@ -17,6 +19,24 @@
     <div class="footer">
         <div class="webgl-logo"></div>
         @*<div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>*@
-        <div class="title">Tower Defense</div>
+        <div class="title">Tower Defense</div><br /><br />
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6" style="text-align:left">
+                    @Html.MenuLink("« ゲーム選択画面へ戻る", "GameSelection", "Home")
+                </div>
+                <div class="col-sm-6" style="text-align:right">
+                    @Html.MenuLink("取扱説明書（別タブで開きます） »", "TowerDefense", "Manual", null, new { target = "_blank" })
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+
+@* ページ移動を確認 *@
+<script>
+function quitConfirmation() {
+    return true;
+}
+    window.onbeforeunload = quitConfirmation;
+</script>
