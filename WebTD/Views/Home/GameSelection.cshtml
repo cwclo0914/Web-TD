@@ -6,5 +6,7 @@
 <h2>@ViewBag.Title</h2>
 <h3>@ViewBag.Message</h3>
 
-@Html.ActionLink("Tower Defense", "Index", "TD", null, new { @class = "btn btn-primary btn-lg" })
-@Html.ActionLink("取扱説明書", "TowerDefense", "Manual")
+<center>
+    <p><a href="@Url.Action("Index", "TD")" title="Tower Defense" class="links"><img alt="Tower Defense" src="@Url.Content("~/Content/Image/TDButton.png")" /></a></p>
+    <strong>@Html.ActionLink("取扱説明書", "TowerDefense", "Manual")</strong>
+</center>

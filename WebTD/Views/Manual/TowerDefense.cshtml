@@ -1,143 +1,127 @@
 ﻿
 @{
-    ViewBag.Title = "TowerDefense";
+    ViewBag.Title = "Tower Defense - Manual";
 }
 
+<script src="~/Scripts/jquery.js"></script>
+<script src="~/Scripts/jquery-ui.js"></script>
+<link href="~/Content/jquery-ui.css" rel="stylesheet" />
 
-<h1>TowerDefense</h1>
+<center><h1>タワーディフェンス：取扱説明書</h1></center>
 
+<div class="panel panel-default">
+    <div class="panel-heading">ゲームの流れ</div>
 
-<h3>・ゲームの流れ</h3>
-<p>
-    道に沿って敵が拠点を壊しに来ます<br />
-    ユニットを配置して敵を退けてください<br />
-    全ての敵がいなくなるとステージクリアです。<br />
-    拠点が破壊されてしまうとゲームオーバーです<br />
+    <div class="panel-body">
+        道に沿って敵が拠点を壊しに来ます！<br />
+        ユニットを配置して敵を退けてください！<br />
+        拠点が破壊されてしまうとゲームオーバーです！<br />
+        全ての敵を倒してください！<br />
+    </div>
+</div>
 
-</p>
+<div class="panel panel-default">
+    <div class="panel-heading">画面説明</div>
 
-<h3>・画面説明</h3>
+    <div class="panel-body">
+        <p>画像をマウスオーバーすると対象の説明が出てきます。</p>
+        <div class="container">
+            <div class="row">
 
-<ul>
+                <div class="col-sm-6">
+                    <center>
+                        <strong>ステージ</strong><br />
+                        <img src="~/Content/Image/Stage.png" id="stagePic" usemap="#stageMap" />
+                        <map name="stageMap">
+                            <p id="stageToolTip">
+                                <area shape="rect" coords="70,127,103,160" title="<strong>ベース：</strong><br />これを守ることがこのゲームの目的です" />
+                                <area shape="rect" coords="127,105,166,142" title="<strong>ユニット：</strong><br />敵を攻撃して、ベースを守ってくれます" />
+                                <area shape="rect" coords="6,105,45,142" title="<strong>ソケット：</strong><br />ユニットを置くための台です" />
+                                <area shape="poly" coords="75,8,233,8,233,183,180,183,180,48,75,48" title="<strong>敵：</strong><br />道の上を進んで、ベースに攻撃してきます" />
+                            </p>
+                        </map>
+                    </center>
+                </div>
 
-    <li>
-        ステージにあるもの<br />
-        <img src="~/Content/Image/Stage.png" />
-        <ul>
-            <li>
-                ベース<br />
-                これを守ることがこのゲームの目的です<br />
-            </li>
-            <li>
-                ソケット<br />
-                ユニットを置くための台<br />
-            </li>
-            <li>
-                ユニット<br />
-                敵を攻撃して、ベースを守ってくれる<br />
-            </li>
-            <li>
-                敵<br />
-                道の上を進んできて、ベースに攻撃をしてきます。<br />
-            </li>
+                <div class="col-sm-6">
+                    <center>
+                        <strong>パネル（ボタン）</strong><br />
+                        <img src="~/Content/Image/Button.png" id="buttonPic" usemap="#buttonMap" />
+                        <map name="buttonMap">
+                            <p id="buttonToolTip">
+                                <area shape="rect" coords="15,3,242,103" title="<strong>ユニットボタン：</strong><br />ユニットを配置するためのボタンです<br/>（金額はユニットを配置する費用です）" />
+                                <area shape="rect" coords="7,117,30,140" title="<strong>メニューボタン：</strong><br />ステージを一時停止させてメニューを開きます" />
+                                <area shape="rect" coords="37,117,122,140" title="<strong>停止・再生・早送り：</strong><br />ステージを止めたり早送りしたりできます<br />（今は早送り機能はありません）" />
+                            </p>
+                        </map>
 
-        </ul>
-    </li>
-    <li>
-        パネルにあるもの<br />
-        <ul>
-            <li>
-                ボタン<br />
-                <img src="~/Content/Image/Button.png" />
-                <ul>
-                    <li>
-                        ユニットボタン<br />
-                        ユニットを配置するためのボタン<br />
-                        下に書いてある金額はユニットを配置する費用です<br />
-                    </li>
-                    <li>
-                        メニューボタン<br />
-                        ステージを一時停止させてメニューを開きます<br />
-                    </li>
-                    <li>
-                        停止・再生・早送り<br />
-                        ステージを止めたり早送りしたりできます(今は早送り機能はありません)<br />
-                    </li>
-                </ul>
-            </li>
-            <li>
-                数値<br />
-                <img src="~/Content/Image/Value.png" />
-                <ul>
-                    <li>
-                        Life<br />
-                        ベースの残り体力を表しています<br />
-                        0になるとゲームオーバーです<br />
-                    </li>
-                    <li>
-                        Wave<br />
-                        各Waveで敵の群れが出てきます<br />
-                        敵の群れが後どれだけ来るかを表しています<br />
-                    </li>
-                    <li>
-                        Money<br />
-                        プレイヤーが所持しているお金<br />
-                    </li>
+                        <strong>パネル（数値）</strong><br />
+                        <img src="~/Content/Image/Value.png" id="valuePic" usemap="#valueMap" />
+                        <map name="valueMap">
+                            <p id="valueToolTip">
+                                <area shape="rect" coords="9,6,111,31" title="<strong>Life：</strong><br />ベースの残り体力を表しています<br/>0になるとゲームオーバーです" />
+                                <area shape="rect" coords="9,41,179,66" title="<strong>Wave：</strong><br />各Waveで敵の群れが出てきます<br />敵の群れが後どれだけ来るかを表します" />
+                                <area shape="rect" coords="9,77,189,102" title="<strong>Money：</strong><br />プレイヤーが所持しているお金です" />
+                            </p>
+                        </map>
+                    </center>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/ManualTooltips.js"></script>
 
 
 
-                </ul>
-            </li>
-        </ul>
+<div class="panel panel-default">
+    <div class="panel-heading">ユニット</div>
 
+    <div class="panel-body">
+        <table class="table-bordered">
+            <tr>
+                <th>ユニット</th>
+                <th>特徴</th>
+            </tr>
+            <tbody>
+                <tr>
+                    <td align="center"><img src="~/Content/Image/Weapon1.png" /></td>
+                    <td align=left>
+                        <ul>
+                            <li>攻撃スピードが速い</li>
+                            <li>地上の敵しか攻撃できない</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center"><img src="~/Content/Image/Weapon2.png" /></td>
+                    <td align=left>
+                        <ul>
+                            <li>標準的な能力</li>
+                            <li>空中の敵しか攻撃できない</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center"><img src="~/Content/Image/Weapon3.png" /></td>
+                    <td align=left>
+                        <ul>
+                            <li>攻撃力と範囲がとても大きい</li>
+                            <li>地上・空中の両方の敵を攻撃できる</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
 
-    </li>
-
-
-
-</ul>
-
-
-
-
-<h3>・ユニット</h3>
 <ul>
     <li>
         種類<br />
-        <!--画像の大きさなどは後で調整します-->
-        <table border="1">
-            <tr>
-                <td>ユニット</td>
-                <td>特徴</td>
-            </tr>
-            <tr>
-                <td><img src="~/Content/Image/Weapon1.png" /></td>
-                <td align=left>
-                    <ul>
-                        <li>攻撃スピードが速い</li>
-                        <li>地上の敵しか攻撃できない</li>
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <td><img src="~/Content/Image/Weapon2.png" /></td>
-                <td align=left>
-                    <ul>
-                        <li>標準的な能力</li>
-                        <li>空中の敵しか攻撃できない</li>
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <td><img src="~/Content/Image/Weapon3.png" /></td>
-                <td align=left>
-                    <ul>
-                        <li>攻撃力と範囲がとても大きい</li>
-                        <li>地上・空中の両方の敵を攻撃できる</li>
-                    </ul>
-                </td>
 
-        </table>
     </li>
     <li>
         攻撃範囲<br />
@@ -210,6 +194,3 @@
 
 <h3>・その他</h3>
 <p>データ消去</p>
-
-
-
