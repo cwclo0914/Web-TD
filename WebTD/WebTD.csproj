@@ -213,6 +213,8 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Image\Bush.png" />
     <Content Include="Content\Image\Button.png" />
+    <Content Include="Content\Image\ClearSave.png" />
+    <Content Include="Content\Image\ClearSaveConfirm.png" />
     <Content Include="Content\Image\Enemy1.png" />
     <Content Include="Content\Image\Enemy2.png" />
     <Content Include="Content\Image\Enemy3.png" />
@@ -243,6 +245,7 @@
     <Content Include="Scripts\Build\TowerDefense.asm.memory.unityweb" />
     <Content Include="Scripts\Build\TowerDefense.data.unityweb" />
     <Content Include="Scripts\Build\TowerDefense.json" />
+    <None Include="Properties\PublishProfiles\TDRelease.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\Build\UnityLoader.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />

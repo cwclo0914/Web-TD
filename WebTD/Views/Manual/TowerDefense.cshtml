@@ -1,4 +1,5 @@
-﻿
+﻿@using WebTD.Helpers;
+
 @{
     ViewBag.Title = "Tower Defense - Manual";
 }
@@ -10,13 +11,10 @@
 <center><h1>タワーディフェンス：取扱説明書</h1></center>
 
 <div class="panel panel-default">
-    <div class="panel-heading">ゲームの流れ</div>
+    <div class="panel-heading">ゲームの目標</div>
 
     <div class="panel-body">
-        道に沿って敵が拠点を壊しに来ます！<br />
-        ユニットを配置して敵を退けてください！<br />
-        拠点が破壊されてしまうとゲームオーバーです！<br />
-        全ての敵を倒してください！<br />
+        <center>道に沿ってベースを壊しに来る敵を、ユニットを配置して退けよ！</center>
     </div>
 </div>
 
@@ -206,7 +204,7 @@
 
                     <div class="col-sm-6">
                         <p><strong>出現位置</strong></p>
-                        <p>敵は画面外からの道かやぶから出てきます。</p>
+                        <p>敵は以下の地形から出てきます。</p>
                         <table>
                             <tr>
                                 <td align="center" style="padding-right: 30px"><img src="~/Content/Image/Entrance.png" /></td>
@@ -229,13 +227,33 @@
 
     <div class="panel-body">
         <div class="container">
-            
-            <p><strong>データ消去</strong></p>
-            <p>
-                スタート画面にはデータ消去のボタンがあり、押したら確認画面が出てきます。<br />
-                赤い<span style="color:red">YES</span>ボタンを押すと全データを消去しますが、<br />
-                <span style="color:red"><strong><u>消去したデータは戻すことができないので、使用時には気を付けてください。</u></strong></span>
-            </p>
+            <div class="row">
+                <div class="col-sm-6">
+                    <p><strong>データ消去</strong></p>
+                    <p>
+                        スタート画面の右下にデータ消去のボタンがあり、押したら確認画面が出てきます。<br />
+                        赤い<span style="color:red">YES</span>ボタンを押すと全データを消去しますが、<br />
+                        <span style="color:red"><strong><u>消去したデータは戻すことができないので、使用時には気を付けてください。</u></strong></span>
+                    </p>
+                </div>
+
+                <div class="col-sm-6">
+                    <center>
+                        <img src="~/Content/Image/ClearSave.png" />　⇒　<img src="~/Content/Image/ClearSaveConfirm.png" />
+                    </center>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6" style="text-align:left">
+            @Html.MenuLink("« 戻る", "GameSelection", "Home")
+        </div>
+        <div class="col-sm-6" style="text-align:right">
+            @Html.MenuLink("ゲームへ進む »", "Index", "TD")
         </div>
     </div>
 </div>
