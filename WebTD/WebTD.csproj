@@ -312,7 +312,6 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\GameSelection.cshtml" />
-    <Content Include="Views\Manual\TowerDefense.cshtml" />
     <Content Include="Views\Manual\_TowerDefense.cshtml" />
   </ItemGroup>
   <ItemGroup>
