@@ -14,5 +14,6 @@ namespace Login.Controllers
             return View(); // cshtml
             //return File("~/Statics/index.html", "text/html"); // static html
         }
+
     }
 }

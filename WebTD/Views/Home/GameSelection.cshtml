@@ -3,6 +3,13 @@
     ViewBag.Title = "ゲーム選択";
 }
 
+@* Modal表示 *@
+
+<div id="modal-container" class="modal fade" tabindex="-1" role="dialog" style="left:5%; width: 90%">
+</div>
+
+<script src="~/Scripts/Modal-Container.js"></script>
+
 <br />
 
 <div class="panel panel-default">
@@ -13,9 +20,8 @@
         <div class="well">
             <center>
                 <p><a href="@Url.Action("Index", "TD")" title="Tower Defense" class="links"><img alt="Tower Defense" src="@Url.Content("~/Content/Image/TDButton.png")" /></a></p>
-                <strong>タワーディフェンス（@Html.ActionLink("取扱説明書", "TowerDefense", "Manual")）</strong>
+                <strong>タワーディフェンス（@Html.ActionLink("遊び方", "PartialTowerDefense", "Manual", null, new { @class = "modal-link" })）</strong>
             </center>
         </div>
     </div>
 </div>
-

@@ -14,9 +14,15 @@ namespace Login.Controllers
             return View();
         }
 
-        public ActionResult TowerDefense()
+        public ActionResult PartialTowerDefense()
         {
-            return View();
+            return PartialView("_TowerDefense");
+        }
+
+        [HttpPost]
+        public ActionResult Partial()
+        {
+            return RedirectToAction("Index");
         }
     }
 }

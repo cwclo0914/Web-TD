@@ -230,7 +230,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Image\Bush.png" />
     <Content Include="Content\Image\Button.png" />
     <Content Include="Content\Image\ClearSave.png" />
@@ -243,6 +242,7 @@
     <Content Include="Content\Image\Range.png" />
     <Content Include="Content\Image\Stage.png" />
     <Content Include="Content\Image\TDButton.png" />
+    <Content Include="Content\Image\Title.jpg" />
     <Content Include="Content\Image\UnitMenu.png" />
     <Content Include="Content\Image\Value.png" />
     <Content Include="Content\Image\Weapon1.png" />
@@ -278,6 +278,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\ManualTooltips.js" />
+    <Content Include="Scripts\Modal-Container.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
@@ -311,7 +312,7 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\GameSelection.cshtml" />
-    <Content Include="Views\Manual\TowerDefense.cshtml" />
+    <Content Include="Views\Manual\_TowerDefense.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
