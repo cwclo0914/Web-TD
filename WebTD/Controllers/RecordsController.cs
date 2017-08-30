@@ -80,8 +80,14 @@ namespace Login.Controllers
                 return BadRequest(ModelState);
             }
 
-            db.Records.Add(record);
+            if (RecordExists(record.UserName))
+            {
+                Record oldRecord = await db.Records.FindAsync(record.UserName, record.StageNum);
+                db.Records.Remove(oldRecord);
+            }
 
+            db.Records.Add(record);
+            
             try
             {
                 await db.SaveChangesAsync();
