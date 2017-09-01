@@ -11,9 +11,15 @@
 <title>Unity WebGL Player | Tower Defense</title>
 <link rel="shortcut icon" href="~/Scripts/TemplateData/favicon.ico">
 <link rel="stylesheet" href="~/Scripts/TemplateData/style.css">
+<link rel="home" id="ApplicationRoot" href="~/" />
 @Scripts.Render("~/bundles/unity")
-@* 公開する時は"./Scripts/Build/TowerDefense.json"で *@
-<script>var gameInstance = UnityLoader.instantiate("gameContainer", "/Scripts/Build/TowerDefense.json", { onProgress: UnityProgress });</script>
+
+<script>
+    function getHome() {
+        return document.getElementById("ApplicationRoot").href
+    }
+    var gameInstance = UnityLoader.instantiate("gameContainer", getHome() + "/Scripts/Build/TowerDefense.json", { onProgress: UnityProgress });
+</script>
 
 
 @* Modal表示 *@
