@@ -80,12 +80,6 @@ namespace Login.Controllers
                 return BadRequest(ModelState);
             }
 
-            if (RecordExists(record.UserName))
-            {
-                Record oldRecord = await db.Records.FindAsync(record.UserName, record.StageNum);
-                db.Records.Remove(oldRecord);
-            }
-
             db.Records.Add(record);
             
             try
