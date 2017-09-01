@@ -9,6 +9,13 @@ namespace WebTD.Helpers
 {
     public static class HtmlHelpers
     {
+
+        public static MvcHtmlString ExternalLink(this HtmlHelper htmlhelper, string url, string text)
+        {
+            return MvcHtmlString.Create(String.Format("<a href='{0}' target=\"_blank\">{1}</a>", url, text));
+        }
+
+
         public static MvcHtmlString MenuLink(this HtmlHelper htmlHelper,
                                     string linkText,
                                     string actionName,
