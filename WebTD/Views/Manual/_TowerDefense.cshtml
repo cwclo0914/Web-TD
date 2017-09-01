@@ -7,11 +7,9 @@
 
     @using (Html.BeginForm("Partial", "Manual", FormMethod.Post))
     {
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12" style="text-align: right">
-                    <button type="button" id="close-btn" class="modal-close-btn">[X] Close</button>
-                </div>
+        <div class="row">
+            <div class="col-sm-12" style="text-align: right">
+                <button type="button" id="close-btn" class="modal-close-btn">[X] Close</button>
             </div>
         </div>
     }
@@ -27,7 +25,93 @@
     </div>
 
     <div class="panel panel-default">
-        <div class="panel-heading">画面説明</div>
+        <div class="panel-heading">スタート画面説明</div>
+
+        <div class="panel-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p><strong>ログイン</strong></p>
+                        <p>
+                            ①このゲームはログインしなくても楽しめますが、<br />
+                            ログインした場合は異なる環境でも同じデータを使えるようになります。
+                        </p>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <center>
+                            <img src="~/Content/Image/Login1.png" />
+                        </center>
+                    </div>
+                </div>
+
+                <div class="row" style="padding-top: 20px">
+                    <div class="col-sm-6">
+                        <p>
+                            ②ボタンを押したらユーザー名を入れてください。
+                        </p>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <center>
+                            <img src="~/Content/Image/Login2.png" />
+                        </center>
+                    </div>
+                </div>
+
+                <div class="row" style="padding-top: 20px">
+                    <div class="col-sm-6">
+                        <p>
+                            ③登録している場合はそのまま遊べます。
+                        </p>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <center>
+                            <img src="~/Content/Image/Login3.png" />
+                        </center>
+                    </div>
+                </div>
+
+                <div class="row" style="padding-top: 20px">
+                    <div class="col-sm-6">
+                        <p>
+                            ④登録していない場合は登録しますか？の画面が出てきますので、<br />
+                            そのまま登録してください。
+                        </p>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <center>
+                            <img src="~/Content/Image/Login4.png" />
+                        </center>
+                    </div>
+                </div>
+
+                <div class="row" style="padding-top: 20px">
+                    <div class="col-sm-6">
+                        <p><strong>データ消去</strong></p>
+                        <p>
+                            スタート画面にデータ消去のボタンがあり、押したら確認画面が出てきます。<br />
+                            赤い<span style="color:red">YES</span>ボタンを押すと全データを消去しますが、<br />
+                            <span style="color:red"><strong><u>消去したデータは戻すことができないので、使用時には気を付けてください。</u></strong></span><br />
+                            ログインしている場合：オンラインのデータを消去します。<br />
+                            ログインしていない場合：ブラウザ依存のデータを消去します。
+                        </p>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <center>
+                            <img src="~/Content/Image/ClearSave.png" />　⇒　<img src="~/Content/Image/ClearSaveConfirm.png" />
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">ゲーム画面説明</div>
 
         <div class="panel-body">
             <center>
@@ -232,36 +316,20 @@
 
     <div class="panel panel-default">
         <div class="panel-heading">その他</div>
-
-        <div class="panel-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <p><strong>データ消去</strong></p>
-                        <p>
-                            スタート画面にデータ消去のボタンがあり、押したら確認画面が出てきます。<br />
-                            赤い<span style="color:red">YES</span>ボタンを押すと全データを消去しますが、<br />
-                            <span style="color:red"><strong><u>消去したデータは戻すことができないので、使用時には気を付けてください。</u></strong></span>
-                        </p>
-                    </div>
-
-                    <div class="col-sm-6">
-                        <center>
-                            <img src="~/Content/Image/ClearSave.png" />　⇒　<img src="~/Content/Image/ClearSaveConfirm.png" />
-                        </center>
-                    </div>
-                </div>
-
-                <div class="row" style="margin-top:20px">
-                    <div class="col-sm-12">
-                        <p><strong>動物ステージ</strong></p>
-                        <p>
-                            ステージ4、8と12は動物ステージです。もしかしたらいいことがあるかも…？
-                        </p>
+        <center>
+            <div class="panel-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <p><strong>動物ステージ</strong></p>
+                            <p>
+                                ステージ4、8と12は動物ステージです。もしかしたらいいことがあるかも…？
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </center>
     </div>
 
     @* 必ず文末に置くこと *@

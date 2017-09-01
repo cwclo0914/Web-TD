@@ -239,6 +239,10 @@
     <Content Include="Content\Image\Enemy3.png" />
     <Content Include="Content\Image\Enemy4.png" />
     <Content Include="Content\Image\Entrance.png" />
+    <Content Include="Content\Image\Login1.png" />
+    <Content Include="Content\Image\Login2.png" />
+    <Content Include="Content\Image\Login3.png" />
+    <Content Include="Content\Image\Login4.png" />
     <Content Include="Content\Image\Range.png" />
     <Content Include="Content\Image\Stage.png" />
     <Content Include="Content\Image\TDButton.png" />
