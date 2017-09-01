@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿// テンプレファイル－今回は使用しておりません
+
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
