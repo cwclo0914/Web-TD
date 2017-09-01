@@ -1,4 +1,6 @@
-﻿@{
+﻿@using WebTD.Helpers;
+
+@{
     ViewBag.Title = "本サイトについて";
 }
 
@@ -11,6 +13,24 @@
             本サイトは技術研修の一環として、約一ヶ月でWeb上で遊べるゲームを作成しました。<br />
             Webだからこそ、社内の皆様に楽しく遊んでいただければと思います。
         </p>
-        <p>※このサイトはMVC5およびUnityで作成しました。</p>
+        <p>※このサイトはASP.NETおよびUnityで作成しました。</p>
+    </div>
+</div>
+
+<div class="panel panel-info">
+    <div class="panel-heading">フリー素材提供</div>
+    <div class="panel-body">
+        <p>
+            Taira Komori 様<br />
+            @Html.ExternalLink("http://taira-komori.jpn.org/freesound.html", "http://taira-komori.jpn.org/freesound.html")
+        </p>
+        <p>
+            魔王魂 様<br />
+            @Html.ExternalLink("http://maoudamashii.jokersounds.com", "http://maoudamashii.jokersounds.com")
+        </p>
+        <p>
+            On-Jin ～音人～ 様<br />
+            @Html.ExternalLink("https://on-jin.com/", "https://on-jin.com/")
+        </p>
     </div>
 </div>
