@@ -36,40 +36,40 @@ namespace Login.Controllers
             return Ok(user);
         }
 
-        // PUT: api/Users/5
-        [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutUser(string id, User user)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
+        //// PUT: api/Users/5
+        //[ResponseType(typeof(void))]
+        //public async Task<IHttpActionResult> PutUser(string id, User user)
+        //{
+        //    if (!ModelState.IsValid)
+        //    {
+        //        return BadRequest(ModelState);
+        //    }
 
-            if (id != user.Name)
-            {
-                return BadRequest();
-            }
+        //    if (id != user.Name)
+        //    {
+        //        return BadRequest();
+        //    }
 
-            db.Entry(user).State = EntityState.Modified;
+        //    db.Entry(user).State = EntityState.Modified;
 
-            try
-            {
-                await db.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!UserExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+        //    try
+        //    {
+        //        await db.SaveChangesAsync();
+        //    }
+        //    catch (DbUpdateConcurrencyException)
+        //    {
+        //        if (!UserExists(id))
+        //        {
+        //            return NotFound();
+        //        }
+        //        else
+        //        {
+        //            throw;
+        //        }
+        //    }
 
-            return StatusCode(HttpStatusCode.NoContent);
-        }
+        //    return StatusCode(HttpStatusCode.NoContent);
+        //}
 
         // POST: api/Users
         [ResponseType(typeof(User))]
@@ -101,21 +101,21 @@ namespace Login.Controllers
             return CreatedAtRoute("DefaultApi", new { id = user.Name }, user);
         }
 
-        // DELETE: api/Users/5
-        [ResponseType(typeof(User))]
-        public async Task<IHttpActionResult> DeleteUser(string id)
-        {
-            User user = await db.Users.FindAsync(id);
-            if (user == null)
-            {
-                return NotFound();
-            }
+        //// DELETE: api/Users/5
+        //[ResponseType(typeof(User))]
+        //public async Task<IHttpActionResult> DeleteUser(string id)
+        //{
+        //    User user = await db.Users.FindAsync(id);
+        //    if (user == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            db.Users.Remove(user);
-            await db.SaveChangesAsync();
+        //    db.Users.Remove(user);
+        //    await db.SaveChangesAsync();
 
-            return Ok(user);
-        }
+        //    return Ok(user);
+        //}
 
         protected override void Dispose(bool disposing)
         {
