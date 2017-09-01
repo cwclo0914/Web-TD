@@ -17,11 +17,11 @@ namespace Login.Controllers
     {
         private LoginContext db = new LoginContext();
 
-        // GET: api/Records
-        public IQueryable<Record> GetRecords()
-        {
-            return db.Records;
-        }
+        //// GET: api/Records
+        //public IQueryable<Record> GetRecords()
+        //{
+        //    return db.Records;
+        //}
 
         // GET: api/Records/5
         [ResponseType(typeof(Record))]
