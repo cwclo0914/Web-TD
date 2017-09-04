@@ -1,0 +1,9 @@
+{
+"TOTAL_MEMORY": 268435456,
+"dataUrl": "TowerDefense.data.unityweb",
+"asmCodeUrl": "TowerDefense.asm.code.unityweb",
+"asmMemoryUrl": "TowerDefense.asm.memory.unityweb",
+"asmFrameworkUrl": "TowerDefense.asm.framework.unityweb",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}
